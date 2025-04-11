@@ -1,4 +1,4 @@
-# Simple Static Project
+# Simple WPS Project
 
 This project was originally developed by **Digital Ent** and is free to use or modify under the [MIT License](LICENSE).
 
