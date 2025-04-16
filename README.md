@@ -21,18 +21,10 @@ Just close the browser tab. 😄
 - Simple static project (No third-party libraries or frameworks)
 - File reader: `.txt` only (due to FileReader API limitations)
 - Time and word count adjustment (input in minutes, auto-converted to milliseconds in JS)
-<<<<<<< HEAD
-- Custom background support _(non-commercial use only)_
+- Custom background support (non-commercial use only)
 - Customized buttons
 - Word history (displays previously shown words)
-- Added "info" button _(currently non-functional)_
-=======
-- Custom background support *(non-commercial use only)*
-- Customized buttons
-- Word history (displays previously shown words)
-- Added "info" button *(currently non-functional)*
->>>>>>> 41ea2b57e884cba0feb903ac403163bca2668f72
-- Non-responsive design
+- Added "info" button (currently non-functional)
 
 ## 📜 License
 
