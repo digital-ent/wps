@@ -22,8 +22,11 @@
           <input type="file" id="file" hidden />
           <label for="file" id="label">File Upload</label>
           <p id="title">Upload .txt file please.</p>
-          <input type="number" id="count" placeholder="Word Count" />
-          <input type="number" id="time" placeholder="Minutes" />
+          <div id="inputs">
+            <input type="number" id="count" placeholder="Word Count" />
+            <input type="number" id="time" placeholder="Minutes" />
+          </div>
+
           <button class="bg-gray" id="button" data-toggle="start" disabled>
             Start
           </button>
@@ -40,7 +43,7 @@
     </footer>
 
     <!-- Hidden Section -->
-    <section id="info-bg" hidden>
+    <section id="info-bg">
       <div id="info-div">
         <div id="info-title">
           <div class="title-div">
@@ -51,6 +54,7 @@
             <span id="info-exit">x</span>
           </div>
         </div>
+
         <div id="info-body">
           <div class="info-card">
             <img
@@ -65,6 +69,8 @@
                 on web development. Also, am a man; don't let the cute ent
                 distract you from the truth.
               </p>
+
+              <p id="info-card-footer-text">>> Scroll >></p>
             </div>
           </div>
         </div>

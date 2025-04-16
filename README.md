@@ -10,6 +10,10 @@ To launch the project, simply **drag and drop `index.html` into your preferred b
 
 Just close the browser tab. 😄
 
+## 📦 Features (Version 1.2)
+
+- Responsive Design
+
 ## 📦 Features (Version 1.1)
 
 - Added additional functionalities to [Information] button.
