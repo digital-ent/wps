@@ -10,15 +10,12 @@ To launch the project, simply **drag and drop `index.html` into your preferred b
 
 Just close the browser tab. 😄
 
-<<<<<<< HEAD
 ## 📦 Features (Version 1.1)
 
 - Added additional functionalities to [Information] button.
 - Added a custom asset (female-ent.png).
 - Fleshed out info section/division.
 
-=======
->>>>>>> 41ea2b57e884cba0feb903ac403163bca2668f72
 ## 📦 Features (Version 1.0)
 
 - Simple static project (No third-party libraries or frameworks)
