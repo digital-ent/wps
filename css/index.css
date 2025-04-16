@@ -62,7 +62,7 @@ nav {
   place-content: center;
   border: 1px solid black;
   border-radius: 0.2rem;
-  background-color: #bbb;
+  background-color: gray;
   transition: 0.4s;
 }
 
@@ -121,6 +121,7 @@ main {
   color: white;
   -webkit-text-stroke: 1px black;
   font-size: 5vw;
+  overflow-x: auto;
 }
 
 footer {
@@ -133,8 +134,8 @@ footer {
   color: white;
   background-color: #2125297a;
   display: flex;
-  align-items: center; /* vertically center items */
-  justify-content: flex-start; /* align items to the left */
+  align-items: center;
+  justify-content: flex-start;
   padding: 0.5rem;
   flex-wrap: wrap;
   overflow-y: auto;
@@ -146,7 +147,84 @@ footer {
   white-space: normal;
   overflow-wrap: break-word;
   word-break: break-word;
-  overflow-y: auto; /* If you want scroll when text gets too tall */
+  overflow-y: auto;
+}
+
+#info-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#info-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 755px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  border-radius: 0.4rem;
+}
+
+#info-title {
+  width: 100%;
+  height: 50px;
+  padding: 0 1.5%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: 1.25rem;
+  background-color: salmon;
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+}
+
+.title-div {
+  width: 50%;
+  place-content: center;
+}
+
+#info-exit {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+#info-body {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.info-card {
+  width: 735px;
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  margin: 5px 10px;
+}
+
+.info-card-text {
+  flex-direction: column;
+  padding: 2%;
+  font-size: 125%;
+}
+
+.info-card-text-title {
+  color: salmon;
+}
+
+.info-card-text-body {
+  padding-top: 2%;
+}
+
+#ent {
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 0.4rem;
 }
 
 @media screen and (max-width: 800px) {

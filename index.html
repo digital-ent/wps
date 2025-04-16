@@ -21,7 +21,7 @@
         <div id="nav-right">
           <input type="file" id="file" hidden />
           <label for="file" id="label">File Upload</label>
-          <p id="title"></p>
+          <p id="title">Upload .txt file please.</p>
           <input type="number" id="count" placeholder="Word Count" />
           <input type="number" id="time" placeholder="Minutes" />
           <button class="bg-gray" id="button" data-toggle="start" disabled>
@@ -38,5 +38,37 @@
     <footer>
       <p id="history"></p>
     </footer>
+
+    <!-- Hidden Section -->
+    <section id="info-bg" hidden>
+      <div id="info-div">
+        <div id="info-title">
+          <div class="title-div">
+            <p>Information</p>
+          </div>
+
+          <div class="title-div">
+            <span id="info-exit">x</span>
+          </div>
+        </div>
+        <div id="info-body">
+          <div class="info-card">
+            <img
+              src="assets/img/female-ent.png"
+              id="ent"
+              alt="Picture of a female Ent"
+            />
+            <div class="info-card-text">
+              <h1 class="info-card-text-title">Digital Ent</h1>
+              <p class="info-card-text-body">
+                At the time this project was created, is a freelancer focusing
+                on web development. Also, am a man; don't let the cute ent
+                distract you from the truth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

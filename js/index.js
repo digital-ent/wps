@@ -1,6 +1,13 @@
-let fileArray = [];
-let time, file, button, count;
+// Global Variables
+let button,
+  count,
+  file,
+  time,
+  timeId,
+  fileArray = [],
+  timeoutIds = [];
 
+//  Onload Event
 document.addEventListener("DOMContentLoaded", () => {
   time = document.getElementById("time");
   file = document.getElementById("file");
@@ -12,12 +19,28 @@ document.addEventListener("DOMContentLoaded", () => {
   count.value = "";
   time.value = "";
 
-  // Now call your setup functions after DOM is ready
+  // Now call your setup functions after DOM is ready.
+  setupInfo();
   setupFile();
   setupCount();
   setupTime();
   setupButton();
 });
+
+// Sets up any and all buttons regarding information.
+function setupInfo() {
+  const info = document.getElementById("info");
+  const infoBg = document.getElementById("info-bg");
+  const exit = document.getElementById("info-exit");
+
+  info.addEventListener("click", () => {
+    infoBg.hidden = false;
+  });
+
+  exit.addEventListener("click", () => {
+    infoBg.hidden = true;
+  });
+}
 
 // Checks if there's any changes on <input type="file">.
 function setupFile() {
@@ -62,6 +85,7 @@ function styleFile() {
   }
 }
 
+// Setup for <input id="count">
 function setupCount() {
   // Listens to keydown events inside <input type="number">
   count.addEventListener("keydown", (event) => {
@@ -90,6 +114,7 @@ function setupCount() {
   count.addEventListener("input", () => {
     const value = parseInt(count.value, 10);
 
+    // Checks if value is not a number or zero, replaces with a number if yes.
     if (isNaN(value) || value <= 0) {
       count.value = 1;
     }
@@ -156,9 +181,7 @@ function toggleButton() {
   }
 }
 
-let timeId; // Declare timeId globally so we can clear it later
-let timeoutIds = []; // Store timeouts in an array to clear them later
-
+// Handles events when start/stop button is pressed.
 function setupButton() {
   const button = document.getElementById("button");
   const word = document.getElementById("word");
@@ -178,12 +201,12 @@ function setupButton() {
     button.classList.add("bg-darkgray");
     button.innerHTML = "Stop";
 
+    // Checks if data-toggle is start or stop and executes code that matches.
     if (button.getAttribute("data-toggle") === "start") {
+      // Changes button data-toggle to stop.
       button.setAttribute("data-toggle", "stop");
 
-      timeoutIds.forEach((id) => clearTimeout(id));
-      timeoutIds = [];
-
+      // Sets fileArray.length as the limit and displays each individual word one at a time, speed is based on wordCount.
       for (let i = 0; i < length; i++) {
         const timeoutId = setTimeout(() => {
           text += fileArray[i] + " ";
@@ -193,6 +216,7 @@ function setupButton() {
         timeoutIds.push(timeoutId);
       }
 
+      // Reverts the stop button back into the start button after displaying is done.
       setTimeout(() => {
         button.classList.remove("bg-darkgray");
         button.classList.add("bg-salmon");
@@ -203,9 +227,11 @@ function setupButton() {
         word.innerHTML = "Digital Ent";
       }, wordCount * length);
     } else if (button.getAttribute("data-toggle") === "stop") {
+      // Clears the setTimeout for each word.
       timeoutIds.forEach((id) => clearTimeout(id));
       timeoutIds = [];
 
+      // Changes the style of the button fitting of the start button.
       button.classList.remove("bg-darkgray");
       button.classList.add("bg-salmon");
       button.innerHTML = "Start";

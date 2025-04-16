@@ -2,4 +2,6 @@ This is an example test I'm using as a way to yap about this project and test th
 
 Do note, that this project reads the individual words in the .txt file that are separated with spaces, so do keep that in mind should words be merged together as the reader have read two or more words as one. So, make sure your words are separated unless you want a supercalifragilisticexpialidocious length text to pop up. You most likely saw how that went and I'm not gonna fix that, hehe.
 
-Among the other things that I've added is the information button which will show who developed it (me), and possibly other contributors should they choose to do. This project was created to be the basics, no reliance on frameworks and any third-parties. A testing ground of what I learned in school and a step to my beginnings as a web developer. That said, I think I've yapped for a long time now, so I'll end it here and say: Banana!
+Among the other things that I've added is the information button which will show who developed it (me), and possibly other contributors should they choose to do. This project was created to be the basics, no reliance on frameworks and any third-parties. A testing ground of what I learned in school and a step to my beginnings as a web developer.
+
+You can also play around with the stop button to try to land it on the supercalifragilisticexpialidocious before this one and rank higher depending on the words per minute by screenshotting it and sharing. That said, I think I've yapped for a long time now, so I'll end it here and say: Banana!
